@@ -50,7 +50,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
@@ -74,19 +74,19 @@ const Skills = () => {
                     <category.icon className="text-primary-foreground transition-transform duration-300 group-hover:scale-110" size={28} />
                   </div>
                   <div className="transition-transform duration-300 group-hover:translate-x-1">
-                    <h3 className="text-xl font-semibold">{category.title}</h3>
-                    <p className="text-muted-foreground text-sm">
+                    <h3 className="text-2xl font-semibold">{category.title}</h3>
+                    <p className="text-muted-foreground text-base">
                       {category.technologies.length} technologies
                     </p>
                   </div>
                 </div>
 
                 {/* Technology Tags */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-4">
                   {category.technologies.map((tech, techIndex) => (
                     <span
                       key={tech}
-                      className="px-4 py-2 bg-muted/50 rounded-lg text-sm font-medium text-foreground border border-border/50 
+                      className="px-5 py-2.5 bg-muted/50 rounded-lg text-base font-medium text-foreground border border-border/50 
                         hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20
                         transition-all duration-300 cursor-default"
                       style={{ animationDelay: `${techIndex * 50}ms` }}
