@@ -87,15 +87,15 @@ const Skills = () => {
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
                   <div
-                    className={`w-14 h-14 rounded-xl ${category.iconBg} flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl cursor-pointer`}
+                    className={`w-14 h-14 rounded-xl ${category.iconBg} flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl cursor-pointer
+                      ${clickedIcon === category.title ? 'animate-spin-right' : ''}
+                      ${leftIcon === category.title ? 'animate-spin-left' : ''}
+                    `}
                     onClick={() => handleIconClick(category.title)}
                     onMouseLeave={() => handleIconLeave(category.title)}
                   >
                     <category.icon 
-                      className={`text-primary-foreground transition-transform duration-500 ease-in-out
-                        ${clickedIcon === category.title ? 'animate-spin-right' : ''}
-                        ${leftIcon === category.title ? 'animate-spin-left' : ''}
-                      `} 
+                      className="text-primary-foreground" 
                       size={28} 
                     />
                   </div>
