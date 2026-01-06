@@ -1,0 +1,105 @@
+import { Button } from "@/components/ui/button";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
+
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+      {/* Background gradient effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-6 opacity-0 animate-slide-in-left">
+            <p className="font-display text-primary text-sm tracking-wider">
+              HELLO, I'M
+            </p>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              Alex <span className="text-gradient">Morgan</span>
+            </h1>
+            <h2 className="text-xl md:text-2xl text-muted-foreground">
+              Full-Stack Software Engineer
+            </h2>
+            <p className="text-muted-foreground max-w-md leading-relaxed">
+              I craft elegant solutions to complex problems, building scalable
+              web applications with modern technologies. Passionate about clean
+              code, user experience, and continuous learning.
+            </p>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-4 pt-4">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+              >
+                <Github size={18} />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="#contact"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+              >
+                <Mail size={18} />
+              </a>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-4">
+              <Button variant="glow" size="lg">
+                View My Work
+              </Button>
+              <Button variant="outline" size="lg">
+                Download CV
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Profile Image */}
+          <div className="flex justify-center lg:justify-end opacity-0 animate-slide-in-right">
+            <div className="relative">
+              {/* Outer glow ring */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-2xl opacity-30 animate-pulse-glow" />
+              
+              {/* Decorative ring */}
+              <div className="absolute -inset-4 rounded-full border border-primary/30" />
+              <div className="absolute -inset-8 rounded-full border border-primary/20" />
+              
+              {/* Profile image */}
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/50 shadow-[0_0_40px_hsl(160_84%_50%/0.3)]">
+                <img
+                  src={profileImage}
+                  alt="Alex Morgan - Software Engineer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card border border-border rounded-full px-4 py-2 shadow-lg">
+                <p className="font-display text-xs text-primary">
+                  5+ Years Experience
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in animation-delay-1000">
+          <span className="text-muted-foreground text-xs tracking-wider">
+            SCROLL DOWN
+          </span>
+          <ArrowDown size={16} className="text-primary animate-bounce" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
