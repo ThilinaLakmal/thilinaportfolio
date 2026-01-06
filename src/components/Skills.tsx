@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Code2, Server, Database, Wrench } from "lucide-react";
 
 const skillCategories = [
@@ -36,6 +37,23 @@ const skillCategories = [
 ];
 
 const Skills = () => {
+  const [clickedIcon, setClickedIcon] = useState<string | null>(null);
+  const [leftIcon, setLeftIcon] = useState<string | null>(null);
+
+  const handleIconClick = (title: string) => {
+    setLeftIcon(null);
+    setClickedIcon(title);
+  };
+
+  const handleIconLeave = (title: string) => {
+    if (clickedIcon === title) {
+      setClickedIcon(null);
+      setLeftIcon(title);
+      // Reset after animation completes
+      setTimeout(() => setLeftIcon(null), 500);
+    }
+  };
+
   return (
     <section id="skills" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -69,9 +87,17 @@ const Skills = () => {
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
                   <div
-                    className={`w-14 h-14 rounded-xl ${category.iconBg} flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-xl`}
+                    className={`w-14 h-14 rounded-xl ${category.iconBg} flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl cursor-pointer`}
+                    onClick={() => handleIconClick(category.title)}
+                    onMouseLeave={() => handleIconLeave(category.title)}
                   >
-                    <category.icon className="text-primary-foreground transition-transform duration-300 group-hover:scale-110" size={28} />
+                    <category.icon 
+                      className={`text-primary-foreground transition-transform duration-500 ease-in-out
+                        ${clickedIcon === category.title ? 'animate-spin-right' : ''}
+                        ${leftIcon === category.title ? 'animate-spin-left' : ''}
+                      `} 
+                      size={28} 
+                    />
                   </div>
                   <div className="transition-transform duration-300 group-hover:translate-x-1">
                     <h3 className="text-2xl font-semibold">{category.title}</h3>
