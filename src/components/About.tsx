@@ -37,7 +37,7 @@ const About = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           {/* Left Content */}
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
