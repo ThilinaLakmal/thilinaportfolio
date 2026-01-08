@@ -64,19 +64,19 @@ const Hero = () => {
           {/* Right Profile Image */}
           <div className="flex justify-center lg:justify-end opacity-0 animate-slide-in-right">
             <div className="relative">
-              {/* Outer glow ring */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-2xl opacity-30 animate-pulse-glow" />
+              {/* Outer glow */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary blur-2xl opacity-30 animate-pulse-glow" />
               
-              {/* Decorative ring */}
-              <div className="absolute -inset-4 rounded-full border border-primary/30" />
-              <div className="absolute -inset-8 rounded-full border border-primary/20" />
+              {/* Decorative border */}
+              <div className="absolute -inset-3 rounded-2xl border border-primary/30" />
+              <div className="absolute -inset-6 rounded-2xl border border-primary/20" />
               
               {/* Profile image */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/50 shadow-[0_0_40px_hsl(160_84%_50%/0.3)]">
+              <div className="relative w-72 h-[380px] md:w-80 md:h-[420px] rounded-2xl overflow-hidden border-2 border-primary/50 shadow-[0_0_40px_hsl(160_84%_50%/0.3)]">
                 <img
                   src={profileImage}
-                  alt="Alex Morgan - Software Engineer"
-                  className="w-full h-full object-cover"
+                  alt="Software Engineer"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 
