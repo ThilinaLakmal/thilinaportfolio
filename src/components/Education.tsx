@@ -53,7 +53,7 @@ const Education = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Education Timeline */}
           <div className="space-y-8">
             <h3 className="text-xl font-semibold mb-6">Academic Background</h3>
