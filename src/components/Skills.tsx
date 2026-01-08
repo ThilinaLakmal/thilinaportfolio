@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Code2, Server, Database, Wrench } from "lucide-react";
 
 const skillCategories = [
@@ -39,6 +39,32 @@ const skillCategories = [
 const Skills = () => {
   const [clickedIcon, setClickedIcon] = useState<string | null>(null);
   const [leftIcon, setLeftIcon] = useState<string | null>(null);
+  const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = cardRefs.current.indexOf(entry.target as HTMLDivElement);
+            if (index !== -1) {
+              setTimeout(() => {
+                setVisibleCards((prev) => new Set([...prev, index]));
+              }, index * 150); // Staggered delay
+            }
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleIconClick = (title: string) => {
     setLeftIcon(null);
@@ -49,7 +75,6 @@ const Skills = () => {
     if (clickedIcon === title) {
       setClickedIcon(null);
       setLeftIcon(title);
-      // Reset after animation completes
       setTimeout(() => setLeftIcon(null), 500);
     }
   };
@@ -72,9 +97,13 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className="relative rounded-xl bg-card overflow-hidden group cursor-pointer transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/20"
+              ref={(el) => (cardRefs.current[index] = el)}
+              className={`relative rounded-xl bg-card overflow-hidden group cursor-pointer transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/20
+                ${visibleCards.has(index) 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-10'
+                }`}
               style={{ 
-                animationDelay: `${index * 100}ms`,
                 transformStyle: 'preserve-3d',
                 perspective: '1000px'
               }}
