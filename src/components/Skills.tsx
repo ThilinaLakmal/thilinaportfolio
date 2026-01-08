@@ -72,8 +72,12 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className="relative rounded-xl bg-card overflow-hidden group cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/10"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="relative rounded-xl bg-card overflow-hidden group cursor-pointer transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/20"
+              style={{ 
+                animationDelay: `${index * 100}ms`,
+                transformStyle: 'preserve-3d',
+                perspective: '1000px'
+              }}
             >
               {/* Gradient top border with animation */}
               <div
