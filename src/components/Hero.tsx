@@ -65,18 +65,18 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end opacity-0 animate-slide-in-right">
             <div className="relative group cursor-pointer">
               {/* Outer glow */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary blur-2xl opacity-30 animate-pulse-glow group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-2xl opacity-30 animate-pulse-glow group-hover:opacity-50 transition-opacity duration-500" />
               
-              {/* Decorative border */}
-              <div className="absolute -inset-3 rounded-2xl border border-primary/30 group-hover:border-primary/50 group-hover:-inset-4 transition-all duration-500" />
-              <div className="absolute -inset-6 rounded-2xl border border-primary/20 group-hover:border-primary/30 group-hover:-inset-8 transition-all duration-500" />
+              {/* Decorative border rings */}
+              <div className="absolute -inset-3 rounded-full border border-primary/30 group-hover:border-primary/50 group-hover:-inset-4 transition-all duration-500" />
+              <div className="absolute -inset-6 rounded-full border border-primary/20 group-hover:border-primary/30 group-hover:-inset-8 transition-all duration-500" />
               
               {/* Profile image */}
-              <div className="relative w-72 h-[380px] md:w-80 md:h-[420px] rounded-2xl overflow-hidden border-2 border-primary/50 shadow-[0_0_40px_hsl(160_84%_50%/0.3)] group-hover:shadow-[0_0_60px_hsl(160_84%_50%/0.5)] group-hover:scale-[1.02] transition-all duration-500">
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50 shadow-[0_0_40px_hsl(160_84%_50%/0.3)] group-hover:shadow-[0_0_60px_hsl(160_84%_50%/0.5)] group-hover:scale-[1.02] transition-all duration-500">
                 <img
                   src={profileImage}
                   alt="Software Engineer"
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
