@@ -72,11 +72,11 @@ const Hero = () => {
               <div className="absolute -inset-6 rounded-full border border-primary/20 group-hover:border-primary/30 group-hover:-inset-8 transition-all duration-500" />
               
               {/* Profile image */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50 shadow-[0_0_40px_hsl(160_84%_50%/0.3)] group-hover:shadow-[0_0_60px_hsl(160_84%_50%/0.5)] group-hover:scale-[1.02] transition-all duration-500">
+              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/50 shadow-[0_0_40px_hsl(160_84%_50%/0.3)] group-hover:shadow-[0_0_60px_hsl(160_84%_50%/0.5)] group-hover:scale-[1.02] transition-all duration-500">
                 <img
                   src={profileImage}
                   alt="Software Engineer"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
