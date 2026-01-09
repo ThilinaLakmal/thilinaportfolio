@@ -1,23 +1,25 @@
-import { Award, BookOpen, GraduationCap } from "lucide-react";
+import { Award, Calendar, GraduationCap, MapPin } from "lucide-react";
 
 const education = [
   {
-    type: "degree",
     icon: GraduationCap,
-    title: "M.S. Computer Science",
-    institution: "Stanford University",
-    year: "2018 - 2020",
+    title: "BSc (Hons) in Information Technology",
+    institution: "Sri Lanka Institute of Information Technology (SLIIT)",
+    year: "2023 - Present",
+    location: "Malabe, Sri Lanka",
     description:
-      "Specialized in Machine Learning and Distributed Systems. GPA: 3.9/4.0",
+      "Specializing in Information Technology with focus on software development, web technologies, and database management. Active participant in coding clubs and hackathons.",
+    isCurrent: true,
   },
   {
-    type: "degree",
-    icon: BookOpen,
-    title: "B.S. Software Engineering",
-    institution: "MIT",
-    year: "2014 - 2018",
+    icon: GraduationCap,
+    title: "G.C.E. Advanced Level",
+    institution: "High School",
+    year: "2018 - 2020",
+    location: "Wellawaya, Sri Lanka",
     description:
-      "Dean's List all semesters. Senior thesis on microservices architecture.",
+      "Completed Advanced Level education with focus on Mathematics and Science streams.",
+    isCurrent: false,
   },
 ];
 
@@ -48,68 +50,89 @@ const Education = () => {
           <p className="font-display text-primary text-sm tracking-wider mb-2">
             BACKGROUND
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Education & <span className="text-gradient">Certifications</span>
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Education</h2>
+          <p className="text-muted-foreground mt-4">
+            My academic journey and qualifications
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Education Timeline */}
           <div className="space-y-8">
-            <h3 className="text-xl font-semibold mb-6">Academic Background</h3>
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-6 top-0 bottom-0 w-px bg-border" />
-
-              {education.map((item, index) => (
-                <div key={item.title} className="relative pl-16 pb-8 last:pb-0">
-                  {/* Timeline dot */}
-                  <div className="absolute left-0 w-12 h-12 rounded-full bg-card border border-primary/50 flex items-center justify-center shadow-[0_0_20px_hsl(160_84%_50%/0.2)]">
-                    <item.icon className="text-primary" size={20} />
+            {education.map((item, index) => (
+              <div key={item.title} className="relative flex gap-6">
+                {/* Left side - Icon with gradient line */}
+                <div className="flex flex-col items-center">
+                  {/* Icon container */}
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_0_20px_hsl(160_84%_50%/0.3)] flex-shrink-0">
+                    <item.icon className="text-background" size={24} />
                   </div>
+                  {/* Gradient timeline line */}
+                  {index < education.length - 1 && (
+                    <div className="w-1 flex-1 mt-4 rounded-full bg-gradient-to-b from-primary via-secondary to-primary/50" />
+                  )}
+                </div>
 
-                  <div className="bg-card p-6 rounded-xl border border-border hover:border-primary/30 transition-colors">
-                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                      <h4 className="font-semibold">{item.title}</h4>
-                      <span className="text-xs text-primary font-display">
-                        {item.year}
-                      </span>
+                {/* Right side - Content card */}
+                <div className="flex-1 pb-8">
+                  <div className="bg-card p-6 rounded-xl border-l-4 border-l-primary border border-border hover:border-primary/30 transition-colors">
+                    {/* Header with title and current badge */}
+                    <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+                      <h4 className="text-xl font-bold">{item.title}</h4>
+                      {item.isCurrent && (
+                        <span className="px-4 py-1 rounded-full border border-primary text-primary text-sm font-medium">
+                          Current
+                        </span>
+                      )}
                     </div>
-                    <p className="text-muted-foreground text-sm mb-2">
+
+                    {/* Institution name */}
+                    <p className="text-primary font-medium mb-4">
                       {item.institution}
                     </p>
-                    <p className="text-muted-foreground text-sm">
+
+                    {/* Date and Location tags */}
+                    <div className="flex flex-wrap gap-3 mb-4">
+                      <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/50 text-muted-foreground text-sm">
+                        <Calendar size={14} />
+                        {item.year}
+                      </span>
+                      <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/50 text-muted-foreground text-sm">
+                        <MapPin size={14} />
+                        {item.location}
+                      </span>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-muted-foreground leading-relaxed">
                       {item.description}
                     </p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           {/* Certifications */}
-          <div className="space-y-8">
-            <h3 className="text-xl font-semibold mb-6">
+          <div className="mt-16">
+            <h3 className="text-xl font-semibold mb-6 text-center">
               Professional Certifications
             </h3>
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {certifications.map((cert) => (
                 <div
                   key={cert.name}
                   className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/30 transition-colors group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Award className="text-primary" size={20} />
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <Award className="text-background" size={20} />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-medium">{cert.name}</h4>
                     <p className="text-muted-foreground text-sm">
-                      {cert.issuer}
+                      {cert.issuer} • {cert.year}
                     </p>
                   </div>
-                  <span className="text-xs text-muted-foreground font-display">
-                    {cert.year}
-                  </span>
                 </div>
               ))}
             </div>
