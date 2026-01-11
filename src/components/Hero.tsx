@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
 
           {/* Right Profile Image */}
-          <div className="flex justify-center lg:justify-end opacity-0 animate-slide-in-right">
+          <div className="flex justify-center lg:justify-center opacity-0 animate-slide-in-right">
             <div className="relative group cursor-pointer">
               {/* Outer glow */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-2xl opacity-30 animate-pulse-glow group-hover:opacity-50 transition-opacity duration-500" />
