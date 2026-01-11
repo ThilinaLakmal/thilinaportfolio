@@ -47,7 +47,7 @@ const Education = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="font-display text-primary text-sm tracking-wider mb-2">
+          <p className="font-display text-foreground text-sm tracking-wider mb-2">
             BACKGROUND
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">Education</h2>

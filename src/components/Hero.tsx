@@ -13,11 +13,11 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left Content */}
           <div className="space-y-6 opacity-0 animate-slide-in-left">
-            <p className="font-display text-primary text-sm tracking-wider">
+            <p className="font-display text-foreground text-sm tracking-wider">
               HELLO, I'M
             </p>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Thilina <span className="text-gradient">Lakmal</span>
+              Thilina <span className="text-foreground">Lakmal</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground">
               Full-Stack Software Engineer
@@ -82,7 +82,7 @@ const Hero = () => {
 
               {/* Floating badge */}
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card border border-border rounded-full px-4 py-2 shadow-lg">
-                <p className="font-display text-xs text-primary">
+                <p className="font-display text-xs text-foreground">
                   5+ Years Experience
                 </p>
               </div>

@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="py-8 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <a href="#" className="font-display text-xl font-bold text-gradient">
+          <a href="#" className="font-display text-xl font-bold text-foreground">
             &lt;dev/&gt;
           </a>
           <p className="text-muted-foreground text-sm">
