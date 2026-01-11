@@ -64,8 +64,8 @@ const Education = () => {
                 {/* Left side - Icon with gradient line */}
                 <div className="flex flex-col items-center">
                   {/* Icon container */}
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_0_20px_hsl(160_84%_50%/0.3)] flex-shrink-0">
-                    <item.icon className="text-[#0a3d3d]" size={24} />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_0_20px_hsl(217_91%_60%/0.3)] flex-shrink-0">
+                    <item.icon className="text-[#0a1a3d]" size={24} />
                   </div>
                   {/* Gradient timeline line */}
                   {index < education.length - 1 && (
@@ -125,7 +125,7 @@ const Education = () => {
                   className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/30 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-105 transition-transform">
-                    <Award className="text-[#0a3d3d]" size={20} />
+                    <Award className="text-[#0a1a3d]" size={20} />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-medium">{cert.name}</h4>
