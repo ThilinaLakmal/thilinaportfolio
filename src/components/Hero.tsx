@@ -17,7 +17,7 @@ const Hero = () => {
               HELLO, I'M
             </p>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Alex <span className="text-gradient">Morgan</span>
+              Thilina <span className="text-gradient">Lakmal</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground">
               Full-Stack Software Engineer
