@@ -16,7 +16,7 @@ const Hero = () => {
             <p className="font-display text-foreground text-sm tracking-wider">
               HELLO, I'M
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               Thilina <span className="text-foreground">Lakmal</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground">
