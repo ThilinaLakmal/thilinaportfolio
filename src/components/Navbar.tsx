@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="font-display text-xl font-bold text-gradient">
+          <a href="#" className="font-display text-xl font-bold text-foreground">
             &lt;dev/&gt;
           </a>
 

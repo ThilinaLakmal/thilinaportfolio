@@ -29,11 +29,11 @@ const About = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="font-display text-primary text-sm tracking-wider mb-2">
+          <p className="font-display text-foreground text-sm tracking-wider mb-2">
             ABOUT ME
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">
-            Passionate <span className="text-gradient">Developer</span>
+            Passionate <span className="text-foreground">Developer</span>
           </h2>
         </div>
 

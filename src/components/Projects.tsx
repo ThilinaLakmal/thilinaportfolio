@@ -37,11 +37,11 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="font-display text-primary text-sm tracking-wider mb-2">
+          <p className="font-display text-foreground text-sm tracking-wider mb-2">
             PORTFOLIO
           </p>
           <h2 className="text-3xl md:text-4xl font-bold">
-            Featured <span className="text-gradient">Projects</span>
+            Featured <span className="text-foreground">Projects</span>
           </h2>
         </div>
 
