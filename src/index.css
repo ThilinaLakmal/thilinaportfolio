@@ -15,16 +15,16 @@
     --popover: 220 20% 7%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 160 84% 50%;
+    --primary: 217 91% 60%;
     --primary-foreground: 220 20% 4%;
 
-    --secondary: 140 70% 45%;
+    --secondary: 252 87% 67%;
     --secondary-foreground: 220 20% 4%;
 
     --muted: 220 15% 15%;
     --muted-foreground: 220 10% 55%;
 
-    --accent: 160 84% 50%;
+    --accent: 217 91% 60%;
     --accent-foreground: 220 20% 4%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,19 +32,19 @@
 
     --border: 220 15% 18%;
     --input: 220 15% 18%;
-    --ring: 160 84% 50%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
     /* Custom colors */
-    --glow-primary: 160 84% 50%;
-    --glow-secondary: 140 70% 45%;
-    --gradient-start: 160 84% 50%;
-    --gradient-end: 140 70% 45%;
+    --glow-primary: 217 91% 60%;
+    --glow-secondary: 252 87% 67%;
+    --gradient-start: 217 91% 60%;
+    --gradient-end: 252 87% 67%;
     
     /* Shadows */
-    --shadow-glow: 0 0 30px hsl(160 84% 50% / 0.3);
-    --shadow-glow-lg: 0 0 60px hsl(160 84% 50% / 0.4);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
+    --shadow-glow-lg: 0 0 60px hsl(217 91% 60% / 0.4);
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
   }
 
@@ -124,10 +124,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(160 84% 50% / 0.3);
+    box-shadow: 0 0 20px hsl(217 91% 60% / 0.3);
   }
   50% {
-    box-shadow: 0 0 40px hsl(160 84% 50% / 0.5);
+    box-shadow: 0 0 40px hsl(217 91% 60% / 0.5);
   }
 }
 
