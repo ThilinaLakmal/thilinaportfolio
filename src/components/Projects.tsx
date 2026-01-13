@@ -40,8 +40,8 @@ const Projects = () => {
           <p className="font-display text-foreground text-sm tracking-wider mb-2">
             PORTFOLIO
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Featured <span className="text-foreground">Projects</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(210_20%_98%)]">
+            Featured Projects
           </h2>
         </div>
 
@@ -88,7 +88,7 @@ const Projects = () => {
                   )}
                 </div>
 
-                {/* Links */}
+                {/* Links - Live Demo uses success green */}
                 <div className="flex items-center gap-3 pt-2">
                   <Button variant="outline" size="sm" asChild>
                     <a href={project.github}>
@@ -96,7 +96,11 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
-                  <Button variant="default" size="sm" asChild>
+                  <Button 
+                    size="sm" 
+                    asChild
+                    className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                  >
                     <a href={project.live}>
                       <ExternalLink size={16} />
                       Live Demo

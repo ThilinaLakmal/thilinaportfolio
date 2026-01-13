@@ -16,10 +16,10 @@ const Hero = () => {
             <p className="font-display text-foreground text-sm tracking-wider">
               HELLO, I'M
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Thilina <span className="text-foreground">Lakmal</span>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-[hsl(210_20%_98%)]">
+              Thilina <span>Lakmal</span>
             </h1>
-            <h2 className="text-xl md:text-2xl text-muted-foreground">
+            <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
               Full-Stack Software Engineer
             </h2>
             <p className="text-muted-foreground max-w-md leading-relaxed">
@@ -80,10 +80,10 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card border border-border rounded-full px-4 py-2 shadow-lg">
-                <p className="font-display text-xs text-foreground">
-                  5+ Years Experience
+              {/* Floating badge - Available for hire style with green */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-secondary/10 border border-secondary/50 rounded-full px-4 py-2 shadow-lg backdrop-blur-sm">
+                <p className="font-display text-xs text-secondary font-medium">
+                  ✓ Available for Hire
                 </p>
               </div>
             </div>

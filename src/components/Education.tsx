@@ -50,7 +50,7 @@ const Education = () => {
           <p className="font-display text-foreground text-sm tracking-wider mb-2">
             BACKGROUND
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold">Education</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(210_20%_98%)]">Education</h2>
           <p className="text-muted-foreground mt-4">
             My academic journey and qualifications
           </p>
@@ -80,8 +80,8 @@ const Education = () => {
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                       <h4 className="text-xl font-bold">{item.title}</h4>
                       {item.isCurrent && (
-                        <span className="px-4 py-1 rounded-full border border-primary text-primary text-sm font-medium">
-                          Current
+                        <span className="px-4 py-1 rounded-full bg-secondary/10 border border-secondary/50 text-secondary text-sm font-medium">
+                          ✓ Current
                         </span>
                       )}
                     </div>
