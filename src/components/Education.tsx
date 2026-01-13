@@ -56,7 +56,7 @@ const Education = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           {/* Education Timeline */}
           <div className="space-y-8">
             {education.map((item, index) => (
