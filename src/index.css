@@ -6,51 +6,56 @@
 
 @layer base {
   :root {
-    --background: 220 20% 4%;
-    --foreground: 0 0% 95%;
+    /* 60:30:10 Color Architecture */
+    /* 60% - Background: #0F172A */
+    --background: 222 47% 11%;
+    --foreground: 220 13% 91%;
 
-    --card: 220 20% 7%;
-    --card-foreground: 0 0% 95%;
+    /* 30% - Cards/UI: #1E293B */
+    --card: 217 33% 17%;
+    --card-foreground: 220 13% 91%;
 
-    --popover: 220 20% 7%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 220 13% 91%;
 
+    /* 10% - Accent: #3B82F6 (Blue) */
     --primary: 217 91% 60%;
-    --primary-foreground: 220 20% 4%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 252 87% 67%;
-    --secondary-foreground: 220 20% 4%;
+    /* Secondary accent: #10B981 (Green) */
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 217 33% 22%;
+    --muted-foreground: 220 13% 65%;
 
     --accent: 217 91% 60%;
-    --accent-foreground: 220 20% 4%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 13% 91%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
+    --border: 217 33% 25%;
+    --input: 217 33% 22%;
     --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    /* Custom colors */
+    /* Custom colors - Blue accent */
     --glow-primary: 217 91% 60%;
-    --glow-secondary: 252 87% 67%;
+    --glow-secondary: 160 84% 39%;
     --gradient-start: 217 91% 60%;
-    --gradient-end: 252 87% 67%;
+    --gradient-end: 160 84% 39%;
     
-    /* Shadows */
-    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
-    --shadow-glow-lg: 0 0 60px hsl(217 91% 60% / 0.4);
-    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
+    /* Shadows with blue accent */
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.25);
+    --shadow-glow-lg: 0 0 60px hsl(217 91% 60% / 0.35);
+    --shadow-card: 0 8px 32px hsl(222 47% 5% / 0.5);
   }
 
   .dark {
-    --background: 220 20% 4%;
-    --foreground: 0 0% 95%;
+    --background: 222 47% 11%;
+    --foreground: 220 13% 91%;
   }
 }
 
@@ -124,10 +129,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(217 91% 60% / 0.3);
+    box-shadow: 0 0 20px hsl(217 91% 60% / 0.25);
   }
   50% {
-    box-shadow: 0 0 40px hsl(217 91% 60% / 0.5);
+    box-shadow: 0 0 40px hsl(217 91% 60% / 0.4);
   }
 }
 
