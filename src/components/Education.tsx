@@ -43,7 +43,7 @@ const certifications = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-24 relative bg-card/50">
+    <section id="education" className="py-24 relative bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
