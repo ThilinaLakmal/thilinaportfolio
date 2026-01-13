@@ -7,11 +7,14 @@
 @layer base {
   :root {
     /* 60:30:10 Color Architecture */
-    /* 60% - Background: #0F172A */
+    /* 60% - Primary Background: #0F172A */
     --background: 222 47% 11%;
+    /* Text: #E5E7EB */
     --foreground: 220 13% 91%;
+    /* High Emphasis Headers: #F9FAFB */
+    --foreground-emphasis: 210 20% 98%;
 
-    /* 30% - Cards/UI: #1E293B */
+    /* 30% - Surface/Cards: #1E293B */
     --card: 217 33% 17%;
     --card-foreground: 220 13% 91%;
 
@@ -20,34 +23,35 @@
 
     /* 10% - Accent: #3B82F6 (Blue) */
     --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 11%;
+    --primary-foreground: 210 20% 98%;
 
-    /* Secondary accent: #10B981 (Green) */
+    /* Success/Secondary: #10B981 (Green) */
     --secondary: 160 84% 39%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary-foreground: 210 20% 98%;
 
     --muted: 217 33% 22%;
     --muted-foreground: 220 13% 65%;
 
     --accent: 217 91% 60%;
-    --accent-foreground: 222 47% 11%;
+    --accent-foreground: 210 20% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 220 13% 91%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 217 33% 25%;
+    /* Border Color: #334155 */
+    --border: 215 25% 27%;
     --input: 217 33% 22%;
     --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    /* Custom colors - Blue accent */
+    /* Custom colors */
     --glow-primary: 217 91% 60%;
     --glow-secondary: 160 84% 39%;
     --gradient-start: 217 91% 60%;
     --gradient-end: 160 84% 39%;
     
-    /* Shadows with blue accent */
+    /* Shadows */
     --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.25);
     --shadow-glow-lg: 0 0 60px hsl(217 91% 60% / 0.35);
     --shadow-card: 0 8px 32px hsl(222 47% 5% / 0.5);

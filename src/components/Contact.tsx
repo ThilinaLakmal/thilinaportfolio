@@ -33,8 +33,8 @@ const Contact = () => {
           <p className="font-display text-foreground text-sm tracking-wider mb-2">
             GET IN TOUCH
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Let's Work <span className="text-foreground">Together</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(210_20%_98%)]">
+            Let's Work Together
           </h2>
           <p className="text-muted-foreground mt-4 max-w-md mx-auto">
             Have a project in mind? I'd love to hear about it. Drop me a message

@@ -84,8 +84,8 @@ const Skills = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Skills & <span className="text-foreground">Technologies</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[hsl(210_20%_98%)]">
+            Skills & Technologies
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto">
             A comprehensive toolkit I use to bring ideas to life

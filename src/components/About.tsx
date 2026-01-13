@@ -32,8 +32,8 @@ const About = () => {
           <p className="font-display text-foreground text-sm tracking-wider mb-2">
             ABOUT ME
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Passionate <span className="text-foreground">Developer</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(210_20%_98%)]">
+            Passionate Developer
           </h2>
         </div>
 
