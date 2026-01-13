@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import { Award, Calendar, GraduationCap, MapPin } from "lucide-react";
 
 const education = [
@@ -10,6 +11,7 @@ const education = [
     description:
       "Specializing in Information Technology with focus on software development, web technologies, and database management. Active participant in coding clubs and hackathons.",
     isCurrent: true,
+    borderColor: "from-primary via-blue-400 to-transparent",
   },
   {
     icon: GraduationCap,
@@ -20,6 +22,7 @@ const education = [
     description:
       "Completed Advanced Level education with focus on Mathematics and Science streams.",
     isCurrent: false,
+    borderColor: "from-secondary via-emerald-400 to-transparent",
   },
 ];
 
@@ -42,6 +45,33 @@ const certifications = [
 ];
 
 const Education = () => {
+  const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = cardRefs.current.indexOf(entry.target as HTMLDivElement);
+            if (index !== -1) {
+              setTimeout(() => {
+                setVisibleCards((prev) => new Set([...prev, index]));
+              }, index * 150);
+            }
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="education" className="py-24 relative bg-background">
       <div className="container mx-auto px-6">
@@ -56,59 +86,76 @@ const Education = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          {/* Education Timeline */}
-          <div className="space-y-8">
+        <div className="max-w-6xl mx-auto">
+          {/* Education Cards Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
             {education.map((item, index) => (
-              <div key={item.title} className="relative flex gap-6">
-                {/* Left side - Icon with gradient line */}
-                <div className="flex flex-col items-center">
-                  {/* Icon container */}
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-[0_0_20px_hsl(217_91%_60%/0.3)] flex-shrink-0">
-                    <item.icon className="text-[#0a1a3d]" size={24} />
-                  </div>
-                  {/* Gradient timeline line */}
-                  {index < education.length - 1 && (
-                    <div className="w-1 flex-1 mt-4 rounded-full bg-gradient-to-b from-primary via-secondary to-primary/50" />
-                  )}
-                </div>
+              <div
+                key={item.title}
+                ref={(el) => (cardRefs.current[index] = el)}
+                className={`relative rounded-xl bg-card overflow-hidden group cursor-pointer transition-all duration-500 hover:scale-[1.03] hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/20
+                  ${visibleCards.has(index) 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-10'
+                  }`}
+                style={{ 
+                  transformStyle: 'preserve-3d',
+                  perspective: '1000px'
+                }}
+              >
+                {/* Gradient top border with animation */}
+                <div
+                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.borderColor} transition-all duration-500 group-hover:h-1.5`}
+                />
 
-                {/* Right side - Content card */}
-                <div className="flex-1 pb-8">
-                  <div className="bg-card p-6 rounded-xl border-l-4 border-l-primary border border-border hover:border-primary/30 transition-colors">
-                    {/* Header with title and current badge */}
-                    <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                      <h4 className="text-xl font-bold">{item.title}</h4>
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
+
+                <div className="p-8 relative z-10">
+                  {/* Header */}
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl">
+                      <item.icon className="text-[#0a1a3d]" size={28} />
+                    </div>
+                    <div className="flex-1 transition-transform duration-300 group-hover:translate-x-1">
                       {item.isCurrent && (
-                        <span className="px-4 py-1 rounded-full bg-secondary/10 border border-secondary/50 text-secondary text-sm font-medium">
+                        <span className="inline-block px-3 py-0.5 rounded-full bg-secondary/10 border border-secondary/50 text-secondary text-xs font-medium mb-1">
                           ✓ Current
                         </span>
                       )}
+                      <h4 className="text-xl font-bold">{item.title}</h4>
                     </div>
-
-                    {/* Institution name */}
-                    <p className="text-primary font-medium mb-4">
-                      {item.institution}
-                    </p>
-
-                    {/* Date and Location tags */}
-                    <div className="flex flex-wrap gap-3 mb-4">
-                      <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/50 text-muted-foreground text-sm">
-                        <Calendar size={14} />
-                        {item.year}
-                      </span>
-                      <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-muted/50 text-muted-foreground text-sm">
-                        <MapPin size={14} />
-                        {item.location}
-                      </span>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
                   </div>
+
+                  {/* Institution name */}
+                  <p className="text-primary font-medium mb-4">
+                    {item.institution}
+                  </p>
+
+                  {/* Date and Location tags */}
+                  <div className="flex flex-wrap gap-3 mb-4">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-lg text-sm font-medium text-foreground border border-border/50 
+                      hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20
+                      transition-all duration-300 cursor-default">
+                      <Calendar size={14} />
+                      {item.year}
+                    </span>
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-lg text-sm font-medium text-foreground border border-border/50 
+                      hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20
+                      transition-all duration-300 cursor-default">
+                      <MapPin size={14} />
+                      {item.location}
+                    </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
+
+                {/* Bottom shine effect on hover */}
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
@@ -119,20 +166,29 @@ const Education = () => {
               Professional Certifications
             </h3>
             <div className="grid md:grid-cols-3 gap-4">
-              {certifications.map((cert) => (
+              {certifications.map((cert, index) => (
                 <div
                   key={cert.name}
-                  className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/30 transition-colors group"
+                  className="relative flex items-center gap-4 p-4 bg-card rounded-xl border border-border overflow-hidden group cursor-pointer transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-105 transition-transform">
+                  {/* Gradient top border */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-transparent transition-all duration-500 group-hover:h-1.5" />
+                  
+                  {/* Hover glow effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
+                  
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg relative z-10">
                     <Award className="text-[#0a1a3d]" size={20} />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 relative z-10 transition-transform duration-300 group-hover:translate-x-1">
                     <h4 className="font-medium">{cert.name}</h4>
                     <p className="text-muted-foreground text-sm">
                       {cert.issuer} • {cert.year}
                     </p>
                   </div>
+                  
+                  {/* Bottom shine effect */}
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               ))}
             </div>
