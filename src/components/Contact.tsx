@@ -106,15 +106,6 @@ const Contact = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
               
               <div className="p-8 relative z-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-blue-400 flex items-center justify-center shadow-lg">
-                    <MessageSquare className="text-primary-foreground" size={22} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">Contact Info</h3>
-                    <p className="text-muted-foreground text-sm">Reach out anytime</p>
-                  </div>
-                </div>
 
                 <div className="space-y-5">
                   {contactMethods.map((method, index) => (
@@ -199,15 +190,6 @@ const Contact = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 pointer-events-none" />
               
               <div className="p-8 relative z-10">
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-400 flex items-center justify-center shadow-lg">
-                    <Send className="text-primary-foreground" size={22} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">Send a Message</h3>
-                    <p className="text-muted-foreground text-sm">I'll respond within 24 hours</p>
-                  </div>
-                </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-5">
