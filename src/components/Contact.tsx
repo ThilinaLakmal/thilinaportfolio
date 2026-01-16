@@ -87,7 +87,7 @@ const Contact = () => {
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Sparkles className="w-4 h-4 text-primary" />
+            <Sparkles className="w-5 h-5 text-primary" />
             <span className="font-display text-primary text-sm tracking-wider">GET IN TOUCH</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[hsl(210_20%_98%)] mb-4">
@@ -122,8 +122,8 @@ const Contact = () => {
                       className="flex items-center gap-4 p-3 rounded-lg hover:bg-muted/30 transition-all duration-300 group/item cursor-pointer"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      <div className={`w-11 h-11 rounded-lg bg-gradient-to-br ${method.gradient} flex items-center justify-center shadow-md group-hover/item:scale-110 transition-transform duration-300`}>
-                        <method.icon className="text-primary-foreground" size={18} />
+                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${method.gradient} flex items-center justify-center shadow-md group-hover/item:scale-110 transition-transform duration-300`}>
+                        <method.icon className="text-primary-foreground" size={22} />
                       </div>
                       <div>
                         <p className="text-muted-foreground text-xs uppercase tracking-wider">{method.label}</p>
@@ -155,8 +155,8 @@ const Contact = () => {
               
               <div className="p-8 relative z-10">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-emerald-400 flex items-center justify-center shadow-lg">
-                    <Coffee className="text-primary-foreground" size={22} />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-secondary to-emerald-400 flex items-center justify-center shadow-lg">
+                    <Coffee className="text-primary-foreground" size={26} />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold">Let's Connect</h3>
@@ -169,13 +169,13 @@ const Contact = () => {
                     <a
                       key={social.label}
                       href={social.href}
-                      className="w-12 h-12 rounded-xl bg-muted/50 border border-border/50 flex items-center justify-center text-muted-foreground 
+                      className="w-14 h-14 rounded-xl bg-muted/50 border border-border/50 flex items-center justify-center text-muted-foreground 
                         hover:text-primary hover:border-primary/50 hover:bg-primary/10 hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20
                         transition-all duration-300"
                       style={{ animationDelay: `${index * 100}ms` }}
                       aria-label={social.label}
                     >
-                      <social.icon size={20} />
+                      <social.icon size={24} />
                     </a>
                   ))}
                 </div>
