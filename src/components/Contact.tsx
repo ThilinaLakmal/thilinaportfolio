@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, MapPin, Send, Twitter, Sparkles, MessageSquare, Coffee } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Send, Twitter, Sparkles, Coffee } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -48,9 +48,16 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "thilina.lakmal@email.com",
-      href: "mailto:thilina.lakmal@email.com",
+      value: "thilinalakmal284@gmail.com",
+      href: "mailto:thilinalakmal284@gmail.com",
       gradient: "from-blue-500 to-cyan-400",
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+94 710412823",
+      href: "tel:+94710412823",
+      gradient: "from-purple-500 to-pink-400",
     },
     {
       icon: MapPin,
