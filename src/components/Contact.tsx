@@ -10,6 +10,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +41,7 @@ const Contact = () => {
       title: "Message sent!",
       description: "Thanks for reaching out. I'll get back to you soon.",
     });
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const contactMethods = [
@@ -214,6 +215,16 @@ const Contact = () => {
                         className="bg-muted/30 border-border/50 focus:border-primary focus:bg-muted/50 transition-all duration-300 h-12"
                       />
                     </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground/90">Subject</label>
+                    <Input
+                      placeholder="Project inquiry, collaboration, etc."
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      required
+                      className="bg-muted/30 border-border/50 focus:border-primary focus:bg-muted/50 transition-all duration-300 h-12"
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-foreground/90">Your Message</label>
