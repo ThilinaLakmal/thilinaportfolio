@@ -187,9 +187,9 @@ const Contact = () => {
 
           {/* Contact Form Card */}
           <div 
-            className={`lg:col-span-3 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+            className={`lg:col-span-3 h-full transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
           >
-            <div className="relative rounded-xl bg-card overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10"
+            <div className="relative rounded-xl bg-card overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 h-full"
               style={{ transformStyle: 'preserve-3d', perspective: '1000px' }}
             >
               {/* Gradient top border */}
