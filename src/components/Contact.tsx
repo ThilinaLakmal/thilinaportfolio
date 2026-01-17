@@ -54,10 +54,10 @@ const Contact = () => {
     },
     {
       icon: Phone,
-      label: "Phone",
+      label: "WhatsApp",
       value: "+94 710412823",
-      href: "tel:+94710412823",
-      gradient: "from-purple-500 to-pink-400",
+      href: "https://wa.me/94710412823",
+      gradient: "from-green-500 to-emerald-400",
     },
     {
       icon: MapPin,
