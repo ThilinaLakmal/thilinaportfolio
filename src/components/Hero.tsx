@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Code, Sparkles, Zap } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
@@ -13,51 +13,61 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left Content */}
           <div className="space-y-6 opacity-0 animate-slide-in-left">
-            <p className="font-display text-foreground text-sm tracking-wider">
-              HELLO, I'M
-            </p>
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-[hsl(210_20%_98%)]">
-              Thilina <span>Lakmal</span>
-            </h1>
-            <h2 className="text-xl md:text-2xl text-muted-foreground font-medium">
-              Full-Stack Software Engineer
-            </h2>
-            <p className="text-muted-foreground max-w-md leading-relaxed">
-              I craft elegant solutions to complex problems, building scalable
-              web applications with modern technologies. Passionate about clean
-              code, user experience, and continuous learning.
-            </p>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4 pt-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-              >
-                <Github size={18} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="#contact"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-              >
-                <Mail size={18} />
-              </a>
+            {/* Available badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-secondary/50 bg-secondary/10 backdrop-blur-sm">
+              <Sparkles size={14} className="text-secondary" />
+              <span className="text-secondary text-sm font-medium">Available for opportunities</span>
+              <Zap size={14} className="text-secondary" />
             </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <span className="text-[hsl(var(--foreground-emphasis))]">Hi, I'm </span>
+              <span className="text-gradient">Thilina</span>
+              <br />
+              <span className="text-gradient">Lakmal</span>
+            </h1>
+            
+            <h2 className="text-xl md:text-2xl font-medium">
+              <span className="text-muted-foreground">Full-Stack </span>
+              <span className="text-gradient">Software Engineer</span>
+            </h2>
+            
+            <p className="text-muted-foreground max-w-md leading-relaxed">
+              Passionate about crafting elegant code and building meaningful digital
+              experiences. <span className="text-gradient">Turning complex problems into simple, beautiful solutions.</span>
+            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-4">
-              <Button variant="glow" size="lg">
-                View My Work
+              <Button variant="glow" size="lg" className="gap-2">
+                <Code size={18} />
+                VIEW MY WORK
               </Button>
-              <Button variant="outline" size="lg">
-                Download CV
+              <Button variant="outline" size="lg" className="bg-card/50 backdrop-blur-sm">
+                Get In Touch
               </Button>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3 pt-4">
+              <a
+                href="#"
+                className="w-12 h-12 rounded-xl border border-border bg-card/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300 backdrop-blur-sm"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href="#"
+                className="w-12 h-12 rounded-xl border border-border bg-card/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300 backdrop-blur-sm"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="#contact"
+                className="w-12 h-12 rounded-xl border border-border bg-card/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary hover:bg-primary/10 transition-all duration-300 backdrop-blur-sm"
+              >
+                <Mail size={20} />
+              </a>
             </div>
           </div>
 
@@ -67,23 +77,48 @@ const Hero = () => {
               {/* Outer glow */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-2xl opacity-30 animate-pulse-glow group-hover:opacity-50 transition-opacity duration-500" />
               
-              {/* Decorative border rings */}
-              <div className="absolute -inset-3 rounded-full border border-primary/30 group-hover:border-primary/50 group-hover:-inset-4 transition-all duration-500" />
-              <div className="absolute -inset-6 rounded-full border border-primary/20 group-hover:border-primary/30 group-hover:-inset-8 transition-all duration-500" />
+              {/* Dashed circular borders */}
+              <div 
+                className="absolute -inset-6 rounded-full border-2 border-dashed border-secondary/40 group-hover:border-secondary/60 transition-all duration-500"
+                style={{ 
+                  animation: 'spin 30s linear infinite'
+                }} 
+              />
+              <div 
+                className="absolute -inset-12 rounded-full border-2 border-dashed border-primary/30 group-hover:border-primary/50 transition-all duration-500"
+                style={{ 
+                  animation: 'spin 40s linear infinite reverse'
+                }} 
+              />
+              
+              {/* Gradient border ring */}
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary via-secondary to-primary opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Profile image */}
-              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/50 shadow-[0_0_40px_hsl(217_91%_60%/0.3)] group-hover:shadow-[0_0_60px_hsl(217_91%_60%/0.5)] group-hover:scale-[1.02] transition-all duration-500">
+              <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-[0_0_40px_hsl(217_91%_60%/0.3)] group-hover:shadow-[0_0_60px_hsl(217_91%_60%/0.5)] group-hover:scale-[1.02] transition-all duration-500">
                 <img
                   src={profileImage}
-                  alt="Software Engineer"
+                  alt="Thilina Lakmal - Software Engineer"
                   className="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
-              {/* Floating badge - Available for hire style with green */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-secondary/10 border border-secondary/50 rounded-full px-4 py-2 shadow-lg backdrop-blur-sm">
-                <p className="font-display text-xs text-secondary font-medium">
-                  ✓ Available for Hire
+              {/* Floating badge - Top right */}
+              <div className="absolute -top-2 -right-4 md:right-0 bg-card/90 border border-border rounded-xl px-4 py-2 shadow-lg backdrop-blur-sm animate-float">
+                <p className="font-display text-xs text-foreground font-medium">
+                  MERN Stack
+                </p>
+              </div>
+
+              {/* Floating badge - Right side with code icon */}
+              <div className="absolute top-1/3 -right-8 md:-right-12 bg-card/90 border border-border rounded-xl p-3 shadow-lg backdrop-blur-sm animate-float" style={{ animationDelay: '1s' }}>
+                <Code size={18} className="text-primary" />
+              </div>
+
+              {/* Floating badge - Bottom */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card/90 border border-primary/50 rounded-xl px-5 py-2.5 shadow-lg backdrop-blur-sm">
+                <p className="font-display text-sm text-primary font-medium">
+                  Full Stack Dev
                 </p>
               </div>
             </div>
@@ -92,12 +127,26 @@ const Hero = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in animation-delay-1000">
-          <span className="text-muted-foreground text-xs tracking-wider">
-            SCROLL DOWN
+          <span className="text-muted-foreground text-sm">
+            Explore
           </span>
-          <ArrowDown size={16} className="text-primary animate-bounce" />
+          <div className="w-10 h-10 rounded-full border border-secondary/50 bg-secondary/10 flex items-center justify-center">
+            <ArrowDown size={18} className="text-secondary animate-bounce" />
+          </div>
         </div>
       </div>
+
+      {/* CSS for spinning animation */}
+      <style>{`
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
     </section>
   );
 };
