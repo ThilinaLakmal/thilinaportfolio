@@ -115,8 +115,8 @@ const Hero = () => {
                 <Code size={18} className="text-primary" />
               </div>
 
-              {/* Floating badge - Bottom */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card/90 border border-primary/50 rounded-xl px-5 py-2.5 shadow-lg backdrop-blur-sm animate-float" style={{ animationDelay: '2s' }}>
+              {/* Floating badge - Left side */}
+              <div className="absolute bottom-12 -left-8 md:-left-12 bg-card/90 border border-primary/50 rounded-xl px-5 py-2.5 shadow-lg backdrop-blur-sm animate-float" style={{ animationDelay: '2s' }}>
                 <p className="font-display text-sm text-primary font-medium">
                   Full Stack Dev
                 </p>
