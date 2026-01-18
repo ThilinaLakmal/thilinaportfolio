@@ -21,10 +21,10 @@ const Hero = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="text-[hsl(var(--foreground-emphasis))]">Hi, I'm </span>
-              <span className="text-gradient">Thilina</span>
+              <span className="text-gradient">Hi, I'm </span>
+              <span className="text-[hsl(var(--foreground-emphasis))]">Thilina</span>
               <br />
-              <span className="text-gradient">Lakmal</span>
+              <span className="text-[hsl(var(--foreground-emphasis))]">Lakmal</span>
             </h1>
             
             <h2 className="text-xl md:text-2xl font-medium">
