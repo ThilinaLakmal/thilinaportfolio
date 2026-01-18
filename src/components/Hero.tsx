@@ -116,7 +116,7 @@ const Hero = () => {
               </div>
 
               {/* Floating badge - Left side */}
-              <div className="absolute bottom-16 -left-4 md:-left-6 bg-card/90 border border-border rounded-xl px-4 py-2 shadow-lg backdrop-blur-sm animate-float" style={{ animationDelay: '2s' }}>
+              <div className="absolute bottom-16 -left-4 md:-left-6 bg-card/90 border border-border rounded-lg px-3 py-1.5 shadow-lg backdrop-blur-sm animate-float" style={{ animationDelay: '2s' }}>
                 <p className="font-display text-xs text-foreground font-medium">
                   Full Stack Dev
                 </p>
