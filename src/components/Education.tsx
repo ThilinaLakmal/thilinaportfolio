@@ -86,7 +86,7 @@ const Education = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           {/* Education Cards Grid */}
           <div className="flex flex-col gap-8">
             {education.map((item, index) => (
