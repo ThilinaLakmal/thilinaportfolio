@@ -88,7 +88,7 @@ const Education = () => {
 
         <div className="max-w-6xl mx-auto">
           {/* Education Cards Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="flex flex-col gap-8">
             {education.map((item, index) => (
               <div
                 key={item.title}
