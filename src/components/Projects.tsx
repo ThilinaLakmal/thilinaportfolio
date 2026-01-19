@@ -40,7 +40,7 @@ const Projects = () => {
           <p className="font-display text-foreground text-sm tracking-wider mb-2">
             PORTFOLIO
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[hsl(210_20%_98%)]">
+          <h2 className="text-4xl md:text-5xl font-bold text-[hsl(210_20%_98%)]">
             Featured Projects
           </h2>
         </div>
