@@ -111,45 +111,45 @@ const Education = () => {
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
 
-                <div className="p-8 relative z-10">
+                <div className="p-6 relative z-10">
                   {/* Header */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl">
-                      <item.icon className="text-[#0a1a3d]" size={28} />
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl">
+                      <item.icon className="text-[#0a1a3d]" size={24} />
                     </div>
                     <div className="flex-1 transition-transform duration-300 group-hover:translate-x-1">
                       {item.isCurrent && (
-                        <span className="inline-block px-3 py-0.5 rounded-full bg-secondary/10 border border-secondary/50 text-secondary text-xs font-medium mb-1">
+                        <span className="inline-block px-2.5 py-0.5 rounded-full bg-secondary/10 border border-secondary/50 text-secondary text-xs font-medium mb-1">
                           ✓ Current
                         </span>
                       )}
-                      <h4 className="text-xl font-bold">{item.title}</h4>
+                      <h4 className="text-lg font-bold">{item.title}</h4>
                     </div>
                   </div>
 
                   {/* Institution name */}
-                  <p className="text-primary font-medium mb-4">
+                  <p className="text-primary font-medium text-base mb-3">
                     {item.institution}
                   </p>
 
                   {/* Date and Location tags */}
-                  <div className="flex flex-wrap gap-3 mb-4">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-lg text-sm font-medium text-foreground border border-border/50 
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-muted/50 rounded-lg text-sm font-medium text-foreground border border-border/50 
                       hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20
                       transition-all duration-300 cursor-default">
-                      <Calendar size={14} />
+                      <Calendar size={13} />
                       {item.year}
                     </span>
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-lg text-sm font-medium text-foreground border border-border/50 
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-muted/50 rounded-lg text-sm font-medium text-foreground border border-border/50 
                       hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:scale-105 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/20
                       transition-all duration-300 cursor-default">
-                      <MapPin size={14} />
+                      <MapPin size={13} />
                       {item.location}
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground text-base leading-relaxed">
                     {item.description}
                   </p>
                 </div>
