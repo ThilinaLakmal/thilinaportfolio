@@ -18,7 +18,7 @@ const education = [
     title: "G.C.E. Advanced Level",
     institution: "High School",
     year: "2018 - 2020",
-    location: "Wellawaya, Sri Lanka",
+    location: "Anamaduwa, Sri Lanka",
     description:
       "Completed Advanced Level education with focus on Mathematics and Science streams.",
     isCurrent: false,
