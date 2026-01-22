@@ -43,9 +43,11 @@ const Hero = () => {
                 <Code size={18} />
                 VIEW MY WORK
               </Button>
-              <Button variant="outline" size="lg" className="bg-card/50 backdrop-blur-sm">
-                Get In Touch
-              </Button>
+              <a href="#contact">
+                <Button variant="outline" size="lg" className="bg-card/50 backdrop-blur-sm">
+                  Get In Touch
+                </Button>
+              </a>
             </div>
 
             {/* Social Links */}

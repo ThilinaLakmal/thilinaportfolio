@@ -33,9 +33,11 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="glow" size="sm">
-              Get In Touch
-            </Button>
+            <a href="#contact">
+              <Button variant="glow" size="sm">
+                Get In Touch
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -60,9 +62,11 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="glow" size="sm" className="w-fit">
-              Get In Touch
-            </Button>
+            <a href="#contact" onClick={() => setIsOpen(false)}>
+              <Button variant="glow" size="sm" className="w-fit">
+                Get In Touch
+              </Button>
+            </a>
           </div>
         )}
       </div>
