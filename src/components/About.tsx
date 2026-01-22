@@ -72,7 +72,7 @@ const About = () => {
             <span className="font-display text-primary text-sm tracking-wider">ABOUT ME</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[hsl(210_20%_98%)] mb-4">
-            Passionate Developer
+            About Me
           </h2>
           <p className="text-muted-foreground text-lg max-w-lg mx-auto leading-relaxed">
             Crafting digital experiences with precision and creativity
