@@ -39,10 +39,12 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-4">
-              <Button variant="glow" size="lg" className="gap-2">
-                <Code size={18} />
-                VIEW MY WORK
-              </Button>
+              <a href="#projects">
+                <Button variant="glow" size="lg" className="gap-2">
+                  <Code size={18} />
+                  VIEW MY WORK
+                </Button>
+              </a>
               <a href="#contact">
                 <Button variant="outline" size="lg" className="bg-card/50 backdrop-blur-sm">
                   Get In Touch
