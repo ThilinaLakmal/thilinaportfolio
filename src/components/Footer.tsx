@@ -7,7 +7,7 @@ const Footer = () => {
             &lt;dev/&gt;
           </a>
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Alex Morgan. Built with passion.
+            © {new Date().getFullYear()} Thilina Lakmal. Built with passion.
           </p>
           <div className="flex items-center gap-6">
             <a
