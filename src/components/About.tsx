@@ -95,8 +95,7 @@ const About = () => {
               
               <div className="relative z-10 space-y-5">
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm a software engineer with over 5 years of experience building
-                  web applications that make a difference. My journey started with
+              I’m an undergraduate software engineering student at SLIIT University Sri Lanka, currently pursuing my degree since 2023. My journey started with
                   curiosity about how things work on the internet, and it evolved
                   into a passion for creating seamless digital experiences.
                 </p>

@@ -90,8 +90,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/ThilinaLakmal", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/thilina-lakmal-90b3163a1/", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" },
   ];
 

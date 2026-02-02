@@ -3,31 +3,31 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "CloudSync Dashboard",
+    title: "Hotel Management System",
     description:
       "A real-time analytics dashboard for cloud infrastructure monitoring with advanced visualization and alerting capabilities.",
     tags: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    github: "#",
-    live: "#",
+    image: "https://acropolium.com/img/cases/hotel-management-system-development-for-a-hospitality-technology-provider/img01.jpg",
+    github: "https://github.com/ThilinaLakmal/hotel-management-system.git",
+    
   },
   {
-    title: "DevFlow",
+    title: "Online Ticket Booking System",
     description:
       "An AI-powered code review platform that helps development teams maintain code quality and accelerate PR reviews.",
     tags: ["Next.js", "Python", "OpenAI", "Redis", "Docker"],
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop",
-    github: "#",
-    live: "#",
+    image: "https://fieldcamp.ai/_next/image/?url=https%3A%2F%2Fcms.fieldcamp.ai%2Fwp-content%2Fuploads%2F2025%2F08%2Ffeature-what-is-online-booking-system-scaled.webp&w=1920&q=75",
+    github: "https://github.com/ThilinaLakmal/ticket-booking-system.git",
+    
   },
   {
-    title: "FinTrack Pro",
+    title: "MOVIE HUB",
     description:
       "A comprehensive personal finance management app with budgeting, investment tracking, and financial goal planning.",
     tags: ["React Native", "Node.js", "MongoDB", "Stripe", "AWS"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    github: "#",
-    live: "#",
+    image: "https://yt3.googleusercontent.com/Q_XIqKWkS9yitQwzbjndbmhf8JlbpETeHDPfDB5jyL_sC0fgPpUWgGvfwIXC7ZvyJ2SAinGXSw=s900-c-k-c0x00ffffff-no-rj",
+    github: "https://github.com/ThilinaLakmal/moviehub.git",
+    
   },
 ];
 
@@ -96,16 +96,7 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
-                  <Button 
-                    size="sm" 
-                    asChild
-                    className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-                  >
-                    <a href={project.live}>
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  </Button>
+                 
                 </div>
               </div>
             </div>

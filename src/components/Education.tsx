@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Award, Calendar, GraduationCap, MapPin } from "lucide-react";
+import { Calendar, GraduationCap, MapPin } from "lucide-react";
 
 const education = [
   {
@@ -20,27 +20,9 @@ const education = [
     year: "2018 - 2020",
     location: "Anamaduwa, Sri Lanka",
     description:
-      "Completed Advanced Level education with focus on Mathematics and Science streams.",
+      "Completed Advanced Level education with focus on Engineering Technology streams with Information and Communication Technology",
     isCurrent: false,
     borderColor: "from-secondary via-emerald-400 to-transparent",
-  },
-];
-
-const certifications = [
-  {
-    name: "AWS Solutions Architect",
-    issuer: "Amazon Web Services",
-    year: "2023",
-  },
-  {
-    name: "Google Cloud Professional",
-    issuer: "Google",
-    year: "2022",
-  },
-  {
-    name: "MongoDB Certified Developer",
-    issuer: "MongoDB",
-    year: "2021",
   },
 ];
 
@@ -158,40 +140,6 @@ const Education = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
-          </div>
-
-          {/* Certifications */}
-          <div className="mt-16">
-            <h3 className="text-xl font-semibold mb-6 text-center">
-              Professional Certifications
-            </h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {certifications.map((cert, index) => (
-                <div
-                  key={cert.name}
-                  className="relative flex items-center gap-4 p-4 bg-card rounded-xl border border-border overflow-hidden group cursor-pointer transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20"
-                >
-                  {/* Gradient top border */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-transparent transition-all duration-500 group-hover:h-1.5" />
-                  
-                  {/* Hover glow effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
-                  
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg relative z-10">
-                    <Award className="text-[#0a1a3d]" size={20} />
-                  </div>
-                  <div className="flex-1 relative z-10 transition-transform duration-300 group-hover:translate-x-1">
-                    <h4 className="font-medium">{cert.name}</h4>
-                    <p className="text-muted-foreground text-sm">
-                      {cert.issuer} • {cert.year}
-                    </p>
-                  </div>
-                  
-                  {/* Bottom shine effect */}
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
