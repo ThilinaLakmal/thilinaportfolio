@@ -16,7 +16,7 @@ const Hero = () => {
             {/* Available badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-secondary/50 bg-secondary/10 backdrop-blur-sm">
               <Sparkles size={14} className="text-secondary" />
-              <span className="text-secondary text-sm font-medium">Available for Internships</span>
+              <span className="text-secondary text-sm font-medium">Full Stack Developer</span>
               <Zap size={14} className="text-secondary" />
             </div>
 
@@ -105,7 +105,7 @@ const Hero = () => {
 
               <div className="absolute -top-2 -right-4 md:right-0 bg-card/90 border border-border rounded-xl px-4 py-2 shadow-lg backdrop-blur-sm animate-float">
                 <p className="font-display text-xs text-foreground font-medium">
-                  MERN Stack
+                  SLIIT (UG)
                 </p>
               </div>
 
