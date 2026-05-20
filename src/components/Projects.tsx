@@ -20,6 +20,15 @@ const projects = [
     github: "https://github.com/ThilinaLakmal/ticket-booking-system.git",
     
   },
+   {
+    title: "Customer Relation Management system",
+    description:
+      "A full-stack CRM engineered for performance and user experience. It features a premium glassmorphic UI with smooth animations, secure JWT authentication, and a highly optimized MySQL backend that processes complex dashboard analytics in a single, highly efficient query.",
+    tags: ["React", "Node.js", "Express.js", "MySQL", "JWT"],
+    image: "https://news.twentyci.co.uk/hubfs/Diagram%20showing%20customer%20relation%20management%20process.png",
+    github: "https://github.com/ThilinaLakmal/crm-assessment",
+    
+  },
   {
     title: "MOVIE HUB",
     description:
